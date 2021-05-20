@@ -29,8 +29,17 @@ public class App
 			
 		} else {
 			
-			System.out.println ( "eilutes skirtingos" );					
+			System.out.println ( "eilutes ne tos pacios" );					
 		}
+		
+		if ( testuojama_eilute.equals ( grazinta_eilute ) ) {
+		
+			System.out.println ( "eilutes tokios pacios" );		
+			
+		} else {
+			
+			System.out.println ( "eilutes skirtingos" );					
+		}		
 		
 		for ( int i = 0; i < kiekis; i++ ) {
 
