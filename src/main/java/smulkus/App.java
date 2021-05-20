@@ -1,5 +1,6 @@
 package smulkus;
 
+import java.util.Objects;
 /**
  * Hello world!
  *
@@ -16,11 +17,11 @@ public class App
 		
 		String testuojama_eilute = "Java mums labai patinka";
 		
-		System.out.println ( "prieš .. skaiciuku vieta : " + skaiciukai.toString() + " kiekis : " + kiekis  + " ir jo vieta : " + testuojama_eilute.toString() );
+		System.out.println ( "prieš .. skaiciuku vieta : " + skaiciukai.toString() + " kiekis : " + kiekis  + " ir  vieta : " + Objects.toString( kiekis ) + " eilute : " + testuojama_eilute + ", o eilutes vieta : " + System.identityHashCode ( testuojama_eilute ) );
 		
 		String grazinta_eilute = Funkcijos.keistiMasyva ( kiekis, skaiciukai, testuojama_eilute );
 		
-		System.out.println ( "po .. skaiciuku vieta : " + skaiciukai.toString()  + " kiekis : " + kiekis + " ir jo vieta : " + grazinta_eilute.toString() );
+		System.out.println ( "po .. skaiciuku vieta : " + skaiciukai.toString()  + " kiekis : " + kiekis + " eilute : " + testuojama_eilute + ", o eilutes vieta : " + System.identityHashCode ( testuojama_eilute ) );
 
 		if ( testuojama_eilute == grazinta_eilute ) {
 		

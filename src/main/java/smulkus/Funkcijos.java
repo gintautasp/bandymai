@@ -14,7 +14,7 @@ public class Funkcijos
 		
 		int tarp;
 		
-		String funkcijos_blabla = "Java mums labai patinka ++xx";
+		String funkcijos_blabla = blabla.substring( 0, 10 ) + "labai patinka";
 	
 		if ( n > 1 ) {
 		

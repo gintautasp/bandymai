@@ -1,0 +1,34 @@
+
+
+	mvnhello
+		|
+		-- apache-maven-3.8.1
+		|		|
+		|		-- bin
+		|			|
+		|			-- mvn // vykdomasis failas
+		|
+		-- hellomvn
+		|
+		-- kitas
+		
+	projekto kurimas:
+	
+		1. reikia buti mvnhello kataloge (nueinam cd)
+		2. apache-maven-3.8.1/bin/mvn archetype:generate
+		3. ir tarkim susikuriam kitas
+	
+	projekto vykdymas:
+	
+		1. ieinam į kitas (su cd)
+		2. ../apache-maven-3.8.1/bin/mvn compile
+		3. ../apache-maven-3.8.1/bin/mvn clean package
+		4. pasiziūrėti kokį jar failą sukuria, pvz kitas-SNAPSHOT-1.0.0.jar
+		5. javac -cp target/kitas-SNAPSHOT-1.0.0.jar paketo_vardas.App
+			tarkim paketo (kartais sutampa su grupesId) vardas belekas
+			javac -cp target/kitas-SNAPSHOT-1.0.0.jar belekas.App
+			
+		
+		
+		
+		
