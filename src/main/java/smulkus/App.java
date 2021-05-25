@@ -49,7 +49,7 @@ public class App
 		System.out.println ( "\n" );
 		System.out.println ( "kvadratines lygties sprendimas : " );
 		
-		double a = 3.0;
+		double a = 0.0;
 		double b = 8.0;
 		double c = 4.0;
 		
@@ -61,7 +61,7 @@ public class App
 		
 		int sprendiniu_sk = Funkcijos.lygtiesSprendiniuSkaicius( D );
 		
-		double[] sprendiniai = Funkcijos.rastiSprendinius ( a, b, c );
+		double[] sprendiniai = Funkcijos.rastiSprendinius ( a, b, c, sprendiniu_sk, D );
 		
 		if ( sprendiniu_sk > 0 ) { 
 		

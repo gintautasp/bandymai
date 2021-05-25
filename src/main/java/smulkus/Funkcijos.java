@@ -53,11 +53,7 @@ public class Funkcijos
 		return lygties_sprendiniu_skaicius;
 	}
 	
-	public static double [] rastiSprendinius ( double a, double b, double c) {
-		
-		double D = skaiciuotiDiskriminanta ( a, b, c );
-		
-		int sprendiniu_skaicius = lygtiesSprendiniuSkaicius ( D );
+	public static double [] rastiSprendinius ( double a, double b, double c, int sprendiniu_skaicius, double D ) {
 		
 		double sprendiniai[] = { 0.0, 0.0 };
 		
