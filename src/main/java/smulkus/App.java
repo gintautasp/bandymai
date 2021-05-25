@@ -45,5 +45,37 @@ public class App
 
 			System.out.print ( skaiciukai [ i ] + " " );
 		}
+		
+		System.out.println ( "\n" );
+		System.out.println ( "kvadratines lygties sprendimas : " );
+		
+		double a = 3.0;
+		double b = 8.0;
+		double c = 4.0;
+		
+		System.out.println ( "kai a=" + a +", b=" + b + ", c=" + c );
+		
+		double D =  Funkcijos.skaiciuotiDiskriminanta ( a, b, c );
+		
+		System.out.println ( "Diskriminatas , D : " +  D );
+		
+		int sprendiniu_sk = Funkcijos.lygtiesSprendiniuSkaicius( D );
+		
+		double[] sprendiniai = Funkcijos.rastiSprendinius ( a, b, c );
+		
+		if ( sprendiniu_sk > 0 ) { 
+		
+			System.out.println ( "lygties sprendiniai : " );
+		
+			for( int i = 0; i < sprendiniu_sk; i++) {
+			
+				System.out.println ( sprendiniai [ i ] + " " );
+			}
+			
+		} else {
+			
+			System.out.println ( "lygtis sprendiniu neturi" );
+		}
+	
 	}
 }
