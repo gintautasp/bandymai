@@ -11,19 +11,7 @@ import org.junit.Test;
  */
 public class IntegraciniaiTest
 {
-	public double tikslumas = 0.000001;
-	
-	double[] a = { 1.0, 2.0, 2.0 };
-	double[] b = { 5.0, 4.0, 5.0 };
-	double[] c = { 9.0, 2.0, 3.0 };
-     
 
-	double[][]  sprendiniai = { { 0.0, 0.0 }, { -1.0, 0.0 }, { -1.0,  -1.5 } };	     
-
-	int[] kiek_sprendiniu = { 0, 1, 2 };
-
-	double[] tiketinasD = { -11.0, 0.0, 1.0 };
-	
 	/**
 	* Rigorous Test :-)
 	*/
@@ -39,21 +27,24 @@ public class IntegraciniaiTest
 	
 
 		assertEquals ( 
+		
 			"diskriminato skaičiavimas, pagal surastą lygties sprendiniu skaicių, kai D<0"
-			, kiek_sprendiniu[ 0 ]
-			,  Funkcijos.lygtiesSprendiniuSkaicius ( Funkcijos.skaiciuotiDiskriminanta ( a[ 0 ], b[ 0 ], c [ 0 ] ) ) 
+			, Reiksmes.kiek_sprendiniu[ 0 ]
+			,  Funkcijos.lygtiesSprendiniuSkaicius ( Funkcijos.skaiciuotiDiskriminanta ( Reiksmes.a[ 0 ], Reiksmes.b[ 0 ], Reiksmes.c [ 0 ] ) ) 
 		);
 		
 		assertEquals ( 
+		
 			"diskriminato skaičiavimas, pagal surastą lygties sprendiniu skaicių, kai D=0"
-			, kiek_sprendiniu[ 1 ]
-			,  Funkcijos.lygtiesSprendiniuSkaicius ( Funkcijos.skaiciuotiDiskriminanta ( a[ 1 ], b[ 1 ], c [ 1 ] ) ) 
+			, Reiksmes.kiek_sprendiniu[ 1 ]
+			,  Funkcijos.lygtiesSprendiniuSkaicius ( Funkcijos.skaiciuotiDiskriminanta ( Reiksmes.a[ 1 ], Reiksmes.b[ 1 ], Reiksmes.c [ 1 ] ) ) 
 		);
 		
 		assertEquals ( 
+		
 			"lygties sprendiniu skaicius, kai D=0"
-			, kiek_sprendiniu[ 2 ]
-			,  Funkcijos.lygtiesSprendiniuSkaicius ( Funkcijos.skaiciuotiDiskriminanta ( a[ 2 ], b[ 2 ], c [ 2 ] ) ) 
+			, Reiksmes.kiek_sprendiniu[ 2 ]
+			,  Funkcijos.lygtiesSprendiniuSkaicius ( Funkcijos.skaiciuotiDiskriminanta ( Reiksmes.a[ 2 ], Reiksmes.b[ 2 ], Reiksmes.c [ 2 ] ) ) 
 		);
 	}  
 
@@ -62,24 +53,27 @@ public class IntegraciniaiTest
 	public void lygtiesSprendiniuSkaiciausRadimoSprendiniams()
 	{	
 		assertArrayEquals ( 
+		
 			"lygties sprendimas, pagal surastą lygties sprendiniu skaicių, kai D<0"
-			,  sprendiniai [ 0 ]
-			, Funkcijos.rastiSprendinius ( a[ 0 ], b [ 0 ], c [ 0 ], Funkcijos.lygtiesSprendiniuSkaicius ( tiketinasD [ 0 ] ), tiketinasD [ 0]  )
-			, tikslumas 
+			,  Reiksmes.sprendiniai [ 0 ]
+			, Funkcijos.rastiSprendinius ( Reiksmes.a[ 0 ], Reiksmes.b [ 0 ], Reiksmes.c [ 0 ], Funkcijos.lygtiesSprendiniuSkaicius ( Reiksmes.tiketinasD [ 0 ] ), Reiksmes.tiketinasD [ 0]  )
+			, Reiksmes.tikslumas 
 		);
 		
 		assertArrayEquals ( 
+		
 			"lygties sprendimas, pagal surastą lygties sprendiniu skaicių, kai D<0"
-			,  sprendiniai [ 1 ]
-			, Funkcijos.rastiSprendinius ( a[ 1 ], b [ 1 ], c [ 1 ], Funkcijos.lygtiesSprendiniuSkaicius ( tiketinasD [ 1 ] ), tiketinasD [ 1 ] )
-			, tikslumas 
+			,  Reiksmes.sprendiniai [ 1 ]
+			, Funkcijos.rastiSprendinius ( Reiksmes.a[ 1 ], Reiksmes.b [ 1 ], Reiksmes.c [ 1 ], Funkcijos.lygtiesSprendiniuSkaicius ( Reiksmes.tiketinasD [ 1 ] ), Reiksmes.tiketinasD [ 1 ] )
+			, Reiksmes.tikslumas 
 		);		
 		
 		assertArrayEquals ( 
+		
 			"lygties sprendimas, pagal surastą lygties sprendiniu skaicių, kai D<0"
-			,  sprendiniai [ 2 ]
-			, Funkcijos.rastiSprendinius ( a[ 2 ], b [ 2 ], c [ 2 ], Funkcijos.lygtiesSprendiniuSkaicius ( tiketinasD [ 2 ] ), tiketinasD [ 2 ] )
-			, tikslumas 
+			,  Reiksmes.sprendiniai [ 2 ]
+			, Funkcijos.rastiSprendinius ( Reiksmes.a[ 2 ], Reiksmes.b [ 2 ], Reiksmes.c [ 2 ], Funkcijos.lygtiesSprendiniuSkaicius ( Reiksmes.tiketinasD [ 2 ] ), Reiksmes.tiketinasD [ 2 ] )
+			, Reiksmes.tikslumas 
 		);	
 	}
 	
@@ -87,24 +81,27 @@ public class IntegraciniaiTest
 	public void diskriminantoSkaiciavimoSprendiniams()
 	{	
 		assertArrayEquals ( 
+		
 			"lygties sprendimas, pagal suskaiciuota diskriminanta, kai D<0"
-			,  sprendiniai [ 0 ]
-			, Funkcijos.rastiSprendinius ( a[ 0 ], b [ 0 ], c [ 0 ], kiek_sprendiniu [ 0 ], Funkcijos.skaiciuotiDiskriminanta ( a[ 0 ], b[ 0 ], c [ 0 ] ) )
-			, tikslumas 
+			,  Reiksmes.sprendiniai [ 0 ]
+			, Funkcijos.rastiSprendinius ( Reiksmes.a[ 0 ], Reiksmes.b [ 0 ], Reiksmes.c [ 0 ], Reiksmes.kiek_sprendiniu [ 0 ], Funkcijos.skaiciuotiDiskriminanta (Reiksmes.a[ 0 ], Reiksmes.b[ 0 ], Reiksmes.c [ 0 ] ) )
+			, Reiksmes.tikslumas 
 		);
 		
 		assertArrayEquals ( 
+		
 			"lygties sprendimas, pagal suskaiciuota diskriminanta, kai D=0"
-			,  sprendiniai [ 1 ]
-			, Funkcijos.rastiSprendinius ( a[ 1 ], b [ 1 ], c [ 1 ], kiek_sprendiniu [ 1 ], Funkcijos.skaiciuotiDiskriminanta ( a[ 0 ], b[ 0 ], c [ 0 ] ) )
-			, tikslumas 
+			,  Reiksmes.sprendiniai [ 1 ]
+			, Funkcijos.rastiSprendinius ( Reiksmes.a[ 1 ], Reiksmes.b [ 1 ], Reiksmes.c [ 1 ], Reiksmes.kiek_sprendiniu [ 1 ], Funkcijos.skaiciuotiDiskriminanta ( Reiksmes.a[ 0 ], Reiksmes.b[ 0 ], Reiksmes.c [ 0 ] ) )
+			, Reiksmes.tikslumas 
 		);		
 		
 		assertArrayEquals ( 
+		
 			"lygties sprendimas, pagal suskaiciuota diskriminanta, kai D>0"
-			,  sprendiniai [ 2 ]
-			, Funkcijos.rastiSprendinius ( a[ 2 ], b [ 2 ], c [ 2 ], kiek_sprendiniu [ 2 ], Funkcijos.skaiciuotiDiskriminanta ( a[ 0 ], b[ 0 ], c [ 0 ] ) )
-			, tikslumas 
+			,  Reiksmes.sprendiniai [ 2 ]
+			, Funkcijos.rastiSprendinius ( Reiksmes.a[ 2 ], Reiksmes.b [ 2 ], Reiksmes.c [ 2 ], Reiksmes.kiek_sprendiniu [ 2 ], Funkcijos.skaiciuotiDiskriminanta ( Reiksmes.a[ 2 ], Reiksmes.b[ 2 ], Reiksmes.c [ 2 ] ) )
+			, Reiksmes.tikslumas 
 		);	
 	}	
 }
