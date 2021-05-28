@@ -9,7 +9,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class SistemosIntegraciniaiTest
 {
 	public double tikslumas = 0.000001;
 
